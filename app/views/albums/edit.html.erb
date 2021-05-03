@@ -1,0 +1,16 @@
+<h1>Editing Album</h1>
+
+<%= render 'form', album: @album %>
+
+<% if @album.images.attached? %>
+  <br><br>Current Images:<br>
+  <div>
+    <% @album.images.each do |image| %>
+      <%= image_tag image, style: "width: 250px; display: run-in" %>
+    <% end %>
+  </div>
+<% end %>
+
+<br><br><br>
+<%= link_to 'Show', @album %> |
+<%= link_to 'Back', albums_path %>

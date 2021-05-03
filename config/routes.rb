@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :images
+  resources :albums
   devise_for :users
-  root to: "images#index"
+  root to: "home#index"
 end

@@ -1,0 +1,17 @@
+<body>
+	<h1>Image Repository</h1>
+
+<% if user_signed_in? %>
+			<p class="user">Welcome!<p>
+			<p class="user"> Click on the button below to manage your albums.<p>
+			<div class = "holder">
+				<%= puts albums_path %>
+				<%= link_to "Manage Albums", albums_path,class:"button" %>
+			</div>
+<% else %>
+		<br>
+		<h2>In order to create and view image repositories, please login or sign up in the top left</h2>
+		</br>
+<% end %>
+	
+</body> 
