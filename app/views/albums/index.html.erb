@@ -24,3 +24,13 @@
 <br>
 
 <%= link_to 'New Album', new_album_path %>
+
+
+<br><br>
+<h3> All Images: </h3>
+<% Album.all.each do |album| %>
+  <% next if album.private %>
+  <% album.images.each do |image| %>
+    <%= image_tag image, style: "width: 250px; display: run-in" %>
+  <% end %>
+<% end %>
