@@ -23,6 +23,11 @@
   </div>
   
   <div class="field">
+    <%= form.label "Private?" %>
+    <%= form.check_box :private %>
+  </div>
+  
+  <div class="field">
     <%= form.label "Upload Image(s)" %>
     <%= form.file_field :images, multiple: true %>
   </div>

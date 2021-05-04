@@ -1,4 +1,4 @@
-class Users::AlbumsController < ApplicationController
+class AlbumsController < ApplicationController
   before_action :set_album, only: %i[ show edit update destroy ]
   before_action :authenticate_user!
 
@@ -73,7 +73,7 @@ class Users::AlbumsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def album_params
-      params.require(:album).permit(:name, :description)
+      params.require(:album).permit(:name, :description, :private)
     end
     
     def check_user
