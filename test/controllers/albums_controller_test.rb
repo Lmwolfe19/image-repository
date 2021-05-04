@@ -4,6 +4,10 @@ class AlbumsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @album = albums(:one)
   end
+  
+  test "should not save without name" do
+    album = Album.new
+    assert_not album.save
 
   test "should get index" do
     get albums_url
