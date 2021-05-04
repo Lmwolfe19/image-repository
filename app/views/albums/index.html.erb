@@ -27,7 +27,11 @@
 
 
 <br><br>
-<h3> All Images: </h3>
+
+<% if Album.count > 0 %>
+  <h3> All Images: </h3>
+<% end %>
+
 <% Album.all.each do |album| %>
   <% next if album.private %>
   <% album.images.each do |image| %>

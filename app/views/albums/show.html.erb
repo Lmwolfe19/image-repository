@@ -10,7 +10,10 @@ Description:
 Private:
 <%= @album.private %> <br>
 
-Images:
+<% if @album.images.count > 0 %>
+  Images:
+<% end %>
+
 <div>
   <% @album.images.each do |image| %>
     <%= image_tag image, style: "width: 250px; display: run-in" %>
