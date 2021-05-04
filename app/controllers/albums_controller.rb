@@ -27,6 +27,11 @@ class AlbumsController < ApplicationController
 
     respond_to do |format|
       if @album.save
+        if params[:album][:images].present?
+          params[:album][:images].each do |image|
+            @album.images.attach(image)
+          end
+        end
         format.html { redirect_to @album, notice: "Album was successfully created." }
         format.json { render :show, status: :created, location: @album }
       else
