@@ -12,7 +12,7 @@ You may use the following information to log into a default account.
 email:  ``user@shopify.com``  
 password:  ``123456``
 
-# Instructions for Use
+## Instructions for Use
 You must first log in or sign up. Links to do so are found in the top left portion of the page.  
 You may create your own account of log in using the following credentials:  
 email:  ``user@shopify.com``  
